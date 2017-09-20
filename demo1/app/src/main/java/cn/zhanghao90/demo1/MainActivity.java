@@ -1,13 +1,16 @@
 package cn.zhanghao90.demo1;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import org.apache.cordova.*;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends CordovaActivity
+{
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        // Set by <content src="index.html" /> in config.xml
+        loadUrl(launchUrl);
     }
 }
+
