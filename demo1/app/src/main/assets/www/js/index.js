@@ -9,7 +9,7 @@ var app = {
 
     onDeviceReady: function() {
         document.getElementById("btn-plugin-toast").addEventListener("click",function () {
-            //调用Echo插件的echo方法
+            //调用ZHToast插件的getToast方法
             cordova.exec(function(resp) {
                     alert("success");
                     alert(resp);
